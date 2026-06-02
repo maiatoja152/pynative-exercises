@@ -52,3 +52,18 @@ def flatten_list(lis: list) -> list:
 
 #nested = [1, [2, 3], [4, [5, 6]], 7]
 #print(flatten_list(nested))
+
+
+# Exercise 6
+def reverse_words(string: str) -> str:
+    return " ".join([s[::-1] for s in string.split(" ")])
+
+#print(reverse_words("Python is awesome"))
+
+
+# Exercise 7
+def palindrome_sentence(sentence: str) -> bool:
+    sentence = "".join(c.lower() for c in sentence if c.isalnum())
+    return sentence == sentence[::-1]
+
+print(palindrome_sentence("A man, a plan, a canal: Panama"))
