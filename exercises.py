@@ -66,4 +66,27 @@ def palindrome_sentence(sentence: str) -> bool:
     sentence = "".join(c.lower() for c in sentence if c.isalnum())
     return sentence == sentence[::-1]
 
-print(palindrome_sentence("A man, a plan, a canal: Panama"))
+#print(palindrome_sentence("A man, a plan, a canal: Panama"))
+
+
+# Exercise 8
+def list_comprehension_filtering(strings: list[str]) -> list[str]:
+    return [s for s in strings if len(s) > 5 and s[0].lower() in "aeiou"]
+
+
+#print(list_comprehension_filtering(
+#    ["apple", "education", "ice", "ocean", "python", "umbrella"])
+#)
+
+
+# Exercise 9
+def remove_duplicates(lis: list) -> list:
+    items_seen = set()
+    for i, item in enumerate(lis):
+        if item in items_seen:
+            del lis[i]
+        else:
+            items_seen.add(item)
+    return lis
+
+#print(remove_duplicates([1, 2, 2, 3, 1, 4, 2]))
