@@ -90,3 +90,34 @@ def remove_duplicates(lis: list) -> list:
     return lis
 
 #print(remove_duplicates([1, 2, 2, 3, 1, 4, 2]))
+
+
+# Exercise 10
+from enum import Enum, auto
+
+class Direction(Enum):
+    RIGHT = auto()
+    LEFT = auto()
+
+def circular_shift(lis: list, shift: int, direction: Direction) -> list:
+    shift %= len(lis)
+    if direction == Direction.RIGHT:
+        return lis[-shift:] + lis[:-shift]
+    else:
+        return lis[shift:] + lis[:shift]
+
+#print(circular_shift([1, 2, 3, 4, 5], 2, Direction.RIGHT))
+#print(circular_shift([1, 2, 3, 4, 5], 12, Direction.LEFT))
+
+
+# Exercise 11
+def dictionary_merge(d1: dict, d2: dict) -> dict:
+    merged = d1
+    for key in d2:
+        if key in merged:
+            merged[key] = [merged[key], d2[key]]
+        else:
+            merged[key] = d2[key]
+    return merged
+
+#print(dictionary_merge({"a": 1, "b": 2}, {"b": 3, "c": 4}))
