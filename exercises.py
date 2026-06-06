@@ -121,3 +121,14 @@ def dictionary_merge(d1: dict, d2: dict) -> dict:
     return merged
 
 #print(dictionary_merge({"a": 1, "b": 2}, {"b": 3, "c": 4}))
+
+
+# Exercise 12
+def inverted_index(dictionary: dict) -> dict:
+    inverted = {}
+    for author, books in dictionary.items():
+        for book in books:
+            inverted[book] = author
+    return inverted
+
+#print(inverted_index({"Orwell": ["1984", "Animal Farm"], "Huxley": ["Brave New World"]}))
