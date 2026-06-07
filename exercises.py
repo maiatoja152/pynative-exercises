@@ -132,3 +132,32 @@ def inverted_index(dictionary: dict) -> dict:
     return inverted
 
 #print(inverted_index({"Orwell": ["1984", "Animal Farm"], "Huxley": ["Brave New World"]}))
+
+
+# Exercise 13
+def dictionary_sorting(dictionaries: list[dict]) -> list[dict]:
+    return sorted(dictionaries, key=lambda d : d["salary"], reverse=True)
+
+#print(dictionary_sorting([
+#    {"name": "A", "salary": 50},
+#    {"name": "B", "salary": 70},
+#    {"name": "C", "salary": 60},
+#]))
+
+
+# Exercise 14
+def subset_superset_or_disjoint(set_a: set, set_b: set) -> None:
+    difference = set_a.difference(set_b)
+    if difference == set():
+        print("Set A is a subset of Set B.")
+    elif difference == set_a:
+        print("Set A and Set B are disjoint.")
+    elif set_b.difference(set_a) == set():
+        print("Set A is a superset of Set B.")
+    else:
+        print("Set A and Set B are not disjoint and neither is a subset or superset of the other.")
+
+#subset_superset_or_disjoint({1, 2, 3}, {1, 2, 3, 4 ,5})
+#subset_superset_or_disjoint({1, 2, 3}, {4, 5, 6})
+#subset_superset_or_disjoint({1, 2, 3, 4}, {2, 3})
+#subset_superset_or_disjoint({1, 2, 3, 4}, {4, 5, 6})
