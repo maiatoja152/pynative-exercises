@@ -168,3 +168,16 @@ def symmetric_difference(list1: list, list2: list) -> set:
     return set(list1).symmetric_difference(list2)
 
 #print(symmetric_difference([101, 102, 103], [103, 104, 105]))
+
+
+# Exercise 16
+from itertools import combinations
+
+def power_set(s: set) -> list:
+    result = []
+    for r in range(len(s) + 1):
+        for combination in combinations(s, r):
+            result.append(combination)
+    return result
+
+#print(power_set({1, 2, 3, 4}))
