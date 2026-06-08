@@ -161,3 +161,10 @@ def subset_superset_or_disjoint(set_a: set, set_b: set) -> None:
 #subset_superset_or_disjoint({1, 2, 3}, {4, 5, 6})
 #subset_superset_or_disjoint({1, 2, 3, 4}, {2, 3})
 #subset_superset_or_disjoint({1, 2, 3, 4}, {4, 5, 6})
+
+
+# Exercise 15
+def symmetric_difference(list1: list, list2: list) -> set:
+    return set(list1).symmetric_difference(list2)
+
+#print(symmetric_difference([101, 102, 103], [103, 104, 105]))
