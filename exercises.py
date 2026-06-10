@@ -181,3 +181,14 @@ def power_set(s: set) -> list:
     return result
 
 #print(power_set({1, 2, 3, 4}))
+
+
+# Exercise 17
+from dateutil.relativedelta import relativedelta
+from datetime import date
+
+def age_calculator(birthday: date, today: date) -> relativedelta:
+    return relativedelta(today, birthday)
+
+#age = age_calculator(date(1995, 5, 15), date.today())
+#print(f"Age: {age.years} years, {age.months} months, {age.days} days")
