@@ -192,3 +192,14 @@ def age_calculator(birthday: date, today: date) -> relativedelta:
 
 #age = age_calculator(date(1995, 5, 15), date.today())
 #print(f"Age: {age.years} years, {age.months} months, {age.days} days")
+
+
+# Exercise 18
+from datetime import datetime
+from datetime import timedelta
+def new_year_countdown() -> timedelta:
+    now = datetime.now()
+    return datetime(now.year + 1, 1, 1) - now
+
+#countdown = new_year_countdown()
+#print(f"{countdown.days} days, {countdown.seconds // 60 ** 2} hours, {countdown.seconds // 60 % 60} minutes")
